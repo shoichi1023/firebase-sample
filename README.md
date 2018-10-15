@@ -47,12 +47,12 @@ array['key'] = value;
 groupと呼ばれるもの(下記で言うt_userのところ)があって、そこにデータが入れられていくこと。  
 RDBと照らし合わせながら考えてみたいと思う。  
 <br />
-##RDB
+##RDB  
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/260113/6ccb7b71-dad5-c2f8-e6ff-09be769a467c.png)
 
 こうだとすると
 
-##RealtimeDatabase
+##RealtimeDatabase  
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/260113/26b244e6-13d2-3f49-a9f9-701954ce81da.png)
 
 こんなイメージ
