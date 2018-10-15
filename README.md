@@ -1,17 +1,17 @@
 #react-native firebaseサンプル
 <br/>
-###やりたいこと
-・FirebaseのRealtimeDatabaseにどのように追加されていくのか知りたい(RDBとの違いの吸収)
+###やりたいこと  
+・FirebaseのRealtimeDatabaseにどのように追加されていくのか知りたい(RDBとの違いの吸収)  
 ※react-nativeでのfirebaseの書き方の練習ではない
 
-###つくるもの
+###つくるもの  
 ・追加だけのtodoみたいなやつ
 
-###前提
+###前提  
 ・firebaseに登録して、RealtimeDatabaseを使ってみようと思ってプロジェクトを作ったが設計の仕方がわからない。RDBは使ったことある。
 
 
-ソース：[firebase-sample](https://github.com/shoichi1023/firebase-sample)
+ソース：[firebase-sample](https://github.com/shoichi1023/firebase-sample)  
 
 上のソースでは足りないので、firebaseフォルダの中に下記を追加
 
@@ -24,17 +24,17 @@ export default {
 }
 ```
 
-###結果どうだったか
+###結果どうだったか  
 まず、RDBと違うところ、当たり前だが私はわからなかった。
 <br />
 **テーブルとか事前に作らなくていい**
 <br />
-え？うそでしょって思った
-DBって先に場所作って、その場所を指定して入れていくものじゃないの？？って
+え？うそでしょって思った  
+DBって先に場所作って、その場所を指定して入れていくものじゃないの？？って  
 違った。
 
-Firebase RealtimeDatabaseって、jsonファイルみたいなもので、空のjsonに、keyを指定して値を入れていく感覚。
-もっとかみ砕いていえば、
+Firebase RealtimeDatabaseって、jsonファイルみたいなもので、空のjsonに、keyを指定して値を入れていく感覚。  
+もっとかみ砕いていえば、  
 
 ```example.js
 var array = [];
@@ -43,9 +43,9 @@ array['key'] = value;
 
 みたいな感覚。
 
-特徴的な部分は
-groupと呼ばれるもの(下記で言うt_userのところ)があって、そこにデータが入れられていくこと。
-RDBと照らし合わせながら考えてみたいと思う。
+特徴的な部分は  
+groupと呼ばれるもの(下記で言うt_userのところ)があって、そこにデータが入れられていくこと。  
+RDBと照らし合わせながら考えてみたいと思う。  
 <br />
 ##RDB
 ![image.png](https://qiita-image-store.s3.amazonaws.com/0/260113/6ccb7b71-dad5-c2f8-e6ff-09be769a467c.png)
@@ -88,8 +88,8 @@ t_user.on('value',snapshot=>{
 
 ```
 
-こんな感じのイメージ
-詳しくはここに載ってる
+こんな感じのイメージ  
+詳しくはここに載ってる  
 [firebase データの取得](https://firebase.google.com/docs/database/admin/retrieve-data?hl=ja#value)
 
 リレーションの仕方とかは上のことを理解したうえでこの人の記事を読むとわかりやすかった。
